@@ -24,6 +24,20 @@ for lap in timer.laps:
 
 ```
 
+## ⏱️ Python vs .NET: Stopwatch Comparison
+
+| Feature                | .NET `Stopwatch`           | Python (built-in)            | Chronolap (This Project)       |
+|------------------------|----------------------------|-------------------------------|--------------------------------|
+| Start / Stop           | ✅ `Start()`, `Stop()`      | ❌ (requires manual handling) | ✅ `start()`, `stop()`         |
+| Restart                | ✅ `Restart()`              | ❌                             | ✅ `restart()`                 |
+| Elapsed Time           | ✅ `Elapsed`, `ElapsedMs`   | ✅ `perf_counter()` difference| ✅ `elapsed`, `elapsed_ms`     |
+| Lap Support            | ❌                          | ❌                             | ✅ `lap()`, `laps`             |
+| Sync Measurement       | ❌                          | ❌                             | ✅ `measure(func)`             |
+| Async Measurement      | ❌                          | ❌                             | ✅ `async_measure(async_func)`|
+| High-resolution Timer  | ✅ Hardware-based           | ⚠️ Platform-dependent          | ✅ Uses `time.perf_counter()`  |
+
+> 📌 The built-in `Stopwatch` in .NET has no direct equivalent in Python. **Chronolap** fills this gap with a fully featured stopwatch, lap tracking, and performance measurement tool.
+
 
 ## Support
 
